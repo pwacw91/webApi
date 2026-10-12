@@ -14,6 +14,7 @@ app.get('/api/messages', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-    console.log('后端服务器运行在 http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`后端服务器运行在端口 ${PORT}`);
 });
